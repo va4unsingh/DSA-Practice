@@ -45,4 +45,21 @@ function findSmallest2(arr) {
   return minVal2;
 }
 
-console.log(findSmallest2(nums2));
+// console.log(findSmallest2(nums2));
+
+// Question 4
+
+const nums3 = [-10, 0, 23, 5, -4, 18, 7, 3];
+
+function findSmallest3(arr) {
+  let minVal3 = arr[0];
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] < minVal3) {
+      minVal3 = arr[i];
+    }
+  }
+  return minVal3;
+}
+
+console.log(findSmallest3(nums3));
