@@ -14,4 +14,35 @@ function findSmallest(arr) {
   return minVal;
 }
 
-console.log(findSmallest(nums));
+// console.log(findSmallest(nums));
+
+// Question 2
+const nums1 = [15, 22, 3, 19, 8, 27];
+
+function findSmallest1(arr) {
+  let minVal1 = arr[0];
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] < minVal1) {
+      minVal1 = arr[i];
+    }
+  }
+  return minVal1;
+}
+
+// console.log(findSmallest1(nums1));
+
+// Question 3
+const nums2 = [0, -3, 14, 7, -8, 2, -1];
+
+function findSmallest2(arr) {
+  let minVal2 = null;
+
+  for (let i = 0; i < arr.length; i++)
+    if (arr[i] > 0 && (minVal2 === null || arr[i] < minVal2)) {
+      minVal2 = arr[i];
+    }
+  return minVal2;
+}
+
+console.log(findSmallest2(nums2));
