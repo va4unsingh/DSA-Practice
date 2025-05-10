@@ -104,15 +104,64 @@
 
 // reverse an array
 
+// let arr = [1, 2, 3, 4, 5];
+
+// let reverseArray = (arr) => {
+//   let rev = [];
+
+//   for (let i = arr.length - 1; i >= 0; i--) {
+//     rev.push(arr[i]);
+//   }
+//   return rev;
+// };
+
+// console.log(reverseArray(arr));
+
+// revise 3 probs
+
+// let arr = [3, 9, 2, 5, 7];
+
+// let largestFn = (arr) => {
+//   let largest = arr[0];
+
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] > largest) {
+//       largest = arr[i];
+//     }
+//   }
+//   return largest;
+// };
+
+// console.log(largestFn(arr));
+
+// 2
+
+// let arr = [4, 1, 7, 3, 9];
+// let target = 9;
+
+// let targetFn = (arr, target) => {
+//   let index = -1;
+
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] === target) {
+//       index = i;
+//     }
+//   }
+//   return index;
+// };
+
+// console.log(targetFn(arr,target));
+
+// 3
+
 let arr = [1, 2, 3, 4, 5];
 
-let reverseArray = (arr) => {
+let revFn = (arr) => {
   let rev = [];
-
-  for (let i = arr.length  - 1; i >= 0; i--) {
-    rev.push(arr[i]);
+  for (let i = arr.length - 1; i >= 0; i--) {
+    rev.push(arr[i])
   }
-  return rev;
+  return rev
 };
 
-console.log(reverseArray(arr));
+console.log(revFn(arr));
