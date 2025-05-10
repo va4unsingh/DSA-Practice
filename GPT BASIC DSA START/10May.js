@@ -248,7 +248,7 @@
 
 // let arr = ["h", "e", "l", "l", "o"];
 
-// function reverseString(arr) {
+// function revArray(arr) {
 //   let left = 0;
 //   let right = arr.length - 1;
 
@@ -263,6 +263,19 @@
 //   return arr;
 // }
 
-// console.log(reverseString(arr));
+// console.log(revArray(arr));
 
-// reverse
+// reverse string
+
+let str = "Hello";
+
+function revString(str) {
+  let revStr = "";
+
+  for (let i = str.length - 1; i >= 0; i--) {
+    revStr += str[i];
+  }
+  return revStr;
+}
+
+console.log(revString(str));
