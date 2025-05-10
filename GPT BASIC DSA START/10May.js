@@ -267,15 +267,31 @@
 
 // reverse string
 
-let str = "Hello";
+// let str = "Hello";
 
-function revString(str) {
-  let revStr = "";
+// function revString(str) {
+//   let revStr = "";
 
-  for (let i = str.length - 1; i >= 0; i--) {
-    revStr += str[i];
-  }
-  return revStr;
+//   for (let i = str.length - 1; i >= 0; i--) {
+//     revStr += str[i];
+//   }
+//   return revStr;
+// }
+
+// console.log(revString(str));
+
+// random shit
+// To convert an array of [1,3,0,0,2,0] to [1,2,3,0,0,0].
+
+let arr = [1, 3, 0, 0, 2, 0];
+
+function sortArray(arr) {
+  let nonZeroArr = arr.filter((num) => num !== 0).sort((a, b) => a - b);
+
+  let zeroCount = arr.length - nonZeroArr.length;
+  nonZeroArr.push(...Array(zeroCount).fill(0));
+
+  return nonZeroArr;
 }
 
-console.log(revString(str));
+console.log(sortArray(arr));
