@@ -166,7 +166,37 @@
 
 // console.log(revFn(arr));
 
-
 // practise again
 
+// let arr = [3, 7, 1, 9, 4];
 
+// let maxNumber = (arr) => {
+//   let vader = arr[0];
+
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] > vader) {
+//       vader = arr[i];
+//     }
+//   }
+//   return vader;
+// };
+
+// console.log(maxNumber(arr));
+
+// target
+
+let arr = [5, 2, 10, 3];
+let target = 10;
+
+let targetFn = (arr, target) => {
+  let index = -1;
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === target) {
+      index = i;
+    }
+  }
+  return index;
+};
+
+console.log(targetFn(arr, target));
