@@ -185,18 +185,40 @@
 
 // target
 
-let arr = [5, 2, 10, 3];
-let target = 10;
+// let arr = [5, 2, 10, 3];
+// let target = 10;
 
-let targetFn = (arr, target) => {
-  let index = -1;
+// let targetFn = (arr, target) => {
+//   let index = -1;
 
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] === target) {
-      index = i;
-    }
-  }
-  return index;
-};
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] === target) {
+//       index = i;
+//     }
+//   }
+//   return index;
+// };
 
-console.log(targetFn(arr, target));
+// console.log(targetFn(arr, target));
+
+// third
+
+// let arr = [12, 35, 1, 10, 34, 1];
+
+// let secondLargest = (arr) => {
+//   let largest = arr[0];
+//   let second = arr[0];
+
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] > largest) {
+//       second = largest;
+//       largest = arr[i];
+//     }
+//     if (arr[i] > second && arr[i] !== largest) {
+//       second = arr[i];
+//     }
+//   }
+//   return second;
+// };
+
+// console.log(secondLargest(arr));
