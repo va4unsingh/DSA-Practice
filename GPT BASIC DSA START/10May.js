@@ -222,3 +222,47 @@
 // };
 
 // console.log(secondLargest(arr));
+
+// reverse array
+// let arr = ["Hello", "World"];
+
+// function reverseFn(arr) {
+//   let left = 0;
+//   let right = arr.length - 1;
+
+//   while (left < right) {
+//     let temp = arr[left];
+
+//     arr[left] = arr[right];
+//     arr[right] = temp;
+
+//     left++;
+//     right--;
+//   }
+// }
+
+// reverseFn(arr);
+// console.log(arr);
+
+// reverse array in place
+
+// let arr = ["h", "e", "l", "l", "o"];
+
+// function reverseString(arr) {
+//   let left = 0;
+//   let right = arr.length - 1;
+
+//   while (left < right) {
+//     let temp = arr[left];
+//     arr[left] = arr[right];
+//     arr[right] = temp;
+
+//     left++;
+//     right--;
+//   }
+//   return arr;
+// }
+
+// console.log(reverseString(arr));
+
+// reverse
