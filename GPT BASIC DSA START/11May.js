@@ -60,3 +60,22 @@
 // console.log(vader(nums, sum, init));
 
 // new 2
+
+let nums = [2, 3, 4];
+
+fn = function product(accum, curr) {
+  return accum * curr;
+};
+
+let init = 1;
+
+function vader(nums, fn, init) {
+  let reduce = init;
+
+  for (let i = 0; i < nums.length; i++) {
+    reduce = fn(reduce, nums[i]);
+  }
+  return reduce;
+}
+
+console.log(vader(nums, fn, init));
