@@ -79,3 +79,5 @@ function vader(nums, fn, init) {
 }
 
 console.log(vader(nums, fn, init));
+
+// lets test
