@@ -72,13 +72,38 @@
 
 // now using recursion
 
+// let array = [1, 2, 3, 4, 5];
+
+// function sum(array) {
+//   if (array.length === 0) return 0;
+//   else {
+//     return array[0] + sum(array.slice(1));
+//   }
+// }
+
+// console.log(sum(array));
+
+// now using recursion count number in array
+// let array = [1, 2, 3, 4, 5];
+
+// function countNum(array) {
+//   if (array.length === 0) return 0;
+//   else {
+//     return 1 + countNum(array.slice(1));
+//   }
+// }
+
+// console.log(countNum(array));
+
+// now using loop
 let array = [1, 2, 3, 4, 5];
 
-function sum(array) {
-  if (array.length === 0) return 0;
-  else {
-    return array[0] + sum(array.slice(1));
+function countNum(array) {
+  let counter = 0;
+  for (let i = 0; i < array.length; i++) {
+    counter++; // or counter = counter + 1
   }
+  return counter;
 }
 
-console.log(sum(array));
+console.log(countNum(array));
