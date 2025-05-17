@@ -199,7 +199,7 @@
 
 // for 2 elements
 
-let array = [10,2];
+let array = [10, 2];
 
 function sortTwo(array) {
   if (array.length < 2) return array; // 0 or 1 element
