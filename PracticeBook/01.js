@@ -154,26 +154,35 @@
 
 // binary search using recursive function
 
-const array = [1, 3, 5, 7, 9, 11];
-const target = 7;
+// const array = [1, 3, 5, 7, 9, 11];
+// const target = 7;
 
-function binarySearch(array, target, low, high) {
-  if (low === undefined) low = 0;
-  if (high === undefined) high = array.length - 1;
+// function binarySearch(array, target, low, high) {
+//   if (low === undefined) low = 0;
+//   if (high === undefined) high = array.length - 1;
 
-  if (low > high) {
-    return -1;
-  }
+//   if (low > high) {
+//     return -1;
+//   }
 
-  const mid = Math.floor((low + high) / 2);
+//   const mid = Math.floor((low + high) / 2);
 
-  if (array[mid] === target) {
-    return mid;
-  } else if (target > array[mid]) {
-    return binarySearch(array, target, mid + 1, high);
-  } else {
-    return binarySearch(array, target, low, mid - 1);
-  }
-}
+//   if (array[mid] === target) {
+//     return mid;
+//   } else if (target > array[mid]) {
+//     return binarySearch(array, target, mid + 1, high);
+//   } else {
+//     return binarySearch(array, target, low, mid - 1);
+//   }
+// }
 
-console.log(binarySearch(array, target));
+// console.log(binarySearch(array, target));
+
+//demo
+// let array = [10];
+// function quickShort(array) {
+//   if (array.length === 0) return "Pagal aur number de";
+//   if (array.length === 1) return array[0];
+// }
+
+// console.log(quickShort(array));
