@@ -186,3 +186,16 @@
 // }
 
 // console.log(quickShort(array));
+
+// 2 Element in Array
+
+let array = [32, 30];
+function quickShort(array) {
+  if (array.length === 0) return "Pagal aur number de";
+  if (array.length === 1) return array[0];
+  else{
+    
+  }
+}
+
+console.log(quickShort(array));
