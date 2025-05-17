@@ -35,14 +35,51 @@
 
 // console.log(fact(5));
 
-let arr = [1, 2, 3, 4];
+// let arr = [1, 2, 3, 4];
 
-function vader(arr) {
-  let sum = 0;
-  for (let i = 0; i < arr.length; i++) {
-    sum += arr[i];
-  }
-  return sum;
-}
+// function vader(arr) {
+//   let sum = 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     sum += arr[i];
+//   }
+//   return sum;
+// }
 
-console.log(vader(arr));
+// console.log(vader(arr));
+
+// same but by recursion by slicing
+
+// function vader(arr) {
+//   if (arr.length === 0) return 0;
+
+//   return arr[0] + vader(arr.slice(1));
+// }
+
+// let arr = [1, 2, 3, 4];
+// console.log(vader(arr)); // 10
+
+// let array = [1, 2, 3, 4, 5];
+
+// function sum(array) {
+//   let vader = 0;
+//   for (let i = 0; i < array.length; i++) {
+//     vader += array[i];
+//   }
+//   return vader;
+// }
+
+// console.log(sum(array));
+
+// now using recursion 
+
+let array = [1, 2, 3, 4, 5];
+
+// function sum(array) {
+//   let vader = 0;
+//   for (let i = 0; i < array.length; i++) {
+//     vader += array[i];
+//   }
+//   return vader;
+// }
+
+// console.log(sum(array));
