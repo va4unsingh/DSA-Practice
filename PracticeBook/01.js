@@ -189,13 +189,29 @@
 
 // 2 Element in Array
 
-let array = [32, 30];
-function quickShort(array) {
-  if (array.length === 0) return "Pagal aur number de";
-  if (array.length === 1) return array[0];
-  else{
-    
+// let array = [10];
+// function quickShort(array) {
+//   if (array.length === 0) return "Pagal aur number de";
+//   if (array.length === 1) return array[0];
+// }
+
+// console.log(quickShort(array));
+
+// for 2 elements
+
+let array = [10,2];
+
+function sortTwo(array) {
+  if (array.length < 2) return array; // 0 or 1 element
+  if (array.length === 2) {
+    if (array[0] > array[1]) {
+      // Swap them
+      return [array[1], array[0]];
+    } else {
+      return array;
+    }
   }
+  return "Only meant for 2 or fewer elements";
 }
 
-console.log(quickShort(array));
+console.log(sortTwo(array));
