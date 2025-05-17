@@ -138,16 +138,42 @@
 // console.log(maxNum(array));
 
 // using loop
-let array = [1, 2, 3, 4, 5, 10334, 200, 500];
+// let array = [1, 2, 3, 4, 5, 10334, 200, 500];
 
-function maxNum(array) {
-  let start = array[0];
-  for (let i = 1; i < array.length; i++) {
-    if (array[i] > start) {
-      start = array[i];
-    }
+// function maxNum(array) {
+//   let start = array[0];
+//   for (let i = 1; i < array.length; i++) {
+//     if (array[i] > start) {
+//       start = array[i];
+//     }
+//   }
+//   return start;
+// }
+
+// console.log(maxNum(array));
+
+// binary search using recursive function
+
+const array = [1, 3, 5, 7, 9, 11];
+const target = 7;
+
+function binarySearch(array, target, low, high) {
+  if (low === undefined) low = 0;
+  if (high === undefined) high = array.length - 1;
+
+  if (low > high) {
+    return -1;
   }
-  return start;
+
+  const mid = Math.floor((low + high) / 2);
+
+  if (array[mid] === target) {
+    return mid;
+  } else if (target > array[mid]) {
+    return binarySearch(array, target, mid + 1, high);
+  } else {
+    return binarySearch(array, target, low, mid - 1);
+  }
 }
 
-console.log(maxNum(array));
+console.log(binarySearch(array, target));
