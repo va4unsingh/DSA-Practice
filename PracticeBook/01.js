@@ -122,17 +122,32 @@
 // console.log(maxNum(array));
 
 // without math max
+// let array = [1, 2, 3, 4, 5, 10334, 200, 500];
+
+// function maxNum(array) {
+//   if (array.length === 1) return array[0];
+
+//   const restMax = maxNum(array.slice(1));
+//   if (array[0] > restMax) {
+//     return array[0];
+//   } else {
+//     return restMax;
+//   }
+// }
+
+// console.log(maxNum(array));
+
+// using loop
 let array = [1, 2, 3, 4, 5, 10334, 200, 500];
 
 function maxNum(array) {
-  if (array.length === 1) return array[0];
-
-  const restMax = maxNum(array.slice(1));
-  if (array[0] > restMax) {
-    return array[0];
-  } else {
-    return restMax;
+  let start = array[0];
+  for (let i = 1; i < array.length; i++) {
+    if (array[i] > start) {
+      start = array[i];
+    }
   }
+  return start;
 }
 
 console.log(maxNum(array));
