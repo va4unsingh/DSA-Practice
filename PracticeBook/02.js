@@ -73,9 +73,54 @@
 // }
 // multiplicationTable(array);
 
-let vader = {};
-vader["apple"] = 0.67;
-vader["banana"] = 1.49;
-vader["avocado"] = 1.49;
+// let vader = {};
+// vader["apple"] = 0.67;
+// vader["banana"] = 1.49;
+// vader["avocado"] = 1.49;
 
-console.log(vader);
+// // console.log(vader);
+// console.log(vader["apple"]);
+
+// let phoneBook = {};
+// phoneBook["varun"] = "33233294329";
+// phoneBook["police"] = "112";
+
+// console.log(phoneBook["varun"]);
+
+// let voted = {};
+
+// function checkVoter(name) {
+//   if (name in voted) {
+//     console.log("kick them out!");
+//   } else {
+//     voted[name] = true;
+//     console.log("Let them vote");
+//   }
+// }
+
+// checkVoter("vader");
+// checkVoter("tubu");
+// checkVoter("vader");
+
+// let cache = {};
+
+// function getDataFromServer(url) {
+//   // Simulate a server response
+//   console.log(`Fetching data from server for: ${url}`);
+//   return `Data from ${url}`;
+// }
+
+// function getPage(url) {
+//   if (url in cache) {
+//     return cache[url];
+//   } else {
+//     let data = getDataFromServer(url);
+//     cache[url] = data;
+//     return data;
+//   }
+// }
+
+// console.log(getPage("example.com")); // Fetches from server
+// console.log(getPage("example.com")); // Returns cached
+// console.log(getPage("another.com")); // Fetches from server
+// console.log(getPage("another.com")); // Returns cached
