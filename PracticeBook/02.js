@@ -33,20 +33,49 @@
 // }
 // printItems(myList);
 
-let myList = ["apple", "banana", "cherry"];
+// let myList = ["apple", "banana", "cherry"];
 
 // myList.forEach((item, i) => setTimeout(() => console.log(item), i * 1000));
 
 // or
 
 // pause helper
-const sleep = (ms) => new Promise((res) => setTimeout(res, ms));
+// const sleep = (ms) => new Promise((res) => setTimeout(res, ms));
 
-// prints one item per second, in order
-async function printItemsWithDelay(myList) {
-  for (const item of myList) {
-    await sleep(1000);
-    console.log(item);
-  }
-}
-printItemsWithDelay(myList)
+// // prints one item per second, in order
+// async function printItemsWithDelay(myList) {
+//   for (const item of myList) {
+//     await sleep(1000);
+//     console.log(item);
+//   }
+// }
+// printItemsWithDelay(myList)
+
+// let array = [2, 3, 7, 8, 10];
+
+// function multiplicationTable(array) {
+//   for (const multiplier of array) {
+//     for (const value of array) {
+//       console.log(`${multiplier}x${value} = ${multiplier * value}`);
+//     }
+//   }
+// }
+
+// multiplicationTable(array);
+
+// or
+// function multiplicationTable(array) {
+//   array.forEach((a) => {
+//     array.forEach((b) => {
+//       console.log(`${a}x${b} = ${a * b}`);
+//     });
+//   });
+// }
+// multiplicationTable(array);
+
+let vader = {};
+vader["apple"] = 0.67;
+vader["banana"] = 1.49;
+vader["avocado"] = 1.49;
+
+console.log(vader);
