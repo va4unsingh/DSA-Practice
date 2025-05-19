@@ -128,19 +128,110 @@
 // console.log(isAnagram(s, t));
 
 // hash array again
-let s = "anagram";
-let t = "nagaram";
+// let s = "anagram";
+// let t = "nagaram";
 
-function isAnagram(s, t) {
-  if (s.length !== t.length) {
-    return false;
-  }
-  const count = new Array(26).fill(0);
-  for (let i = 0; i < s.length; i++) {
-    count[s.charCodeAt(i) - "a".charCodeAt(0)]++;
-    count[t.charCodeAt(i) - "a".charCodeAt(0)]--;
-  }
-  return count.every((val) => val === 0);
-}
+// function isAnagram(s, t) {
+//   if (s.length !== t.length) {
+//     return false;
+//   }
+//   const count = new Array(26).fill(0);
+//   for (let i = 0; i < s.length; i++) {
+//     count[s.charCodeAt(i) - "a".charCodeAt(0)]++;
+//     count[t.charCodeAt(i) - "a".charCodeAt(0)]--;
+//   }
+//   return count.every((val) => val === 0);
+// }
 
-console.log(isAnagram(s, t));
+// console.log(isAnagram(s, t));
+
+// new ques O(n2) nested loop kinda
+// let nums = [2, 7, 11, 15];
+// let target = 9;
+
+// function twoSum(nums, target) {
+//   for (let i = 0; i < nums.length; i++) {
+//     for (let j = i + 1; j < nums.length; j++) {
+//       if (nums[i] + nums[j] === target) {
+//         return [i, j];
+//       }
+//     }
+//   }
+// }
+
+// console.log(twoSum(nums, target));
+
+// O(n)
+// let nums = [2, 7, 11, 15];
+// let target = 9;
+
+// function twoSum(nums, target) {
+//   let map = {};
+
+//   for (let i = 0; i < nums.length; i++) {
+//     let complement = target - nums[i];
+//     if (map.hasOwnProperty(complement)) {
+//       return [map[complement], i];
+//     }
+//     map[nums[i]] = i;
+//   }
+// }
+
+// console.log(twoSum(nums, target));
+
+// sorting
+
+// let nums = [2, 7, 11, 15];
+// let target = 9;
+
+// function twoSum(nums, target) {
+//   let A = [];
+//   for (let i = 0; i < nums.length; i++) {
+//     A.push([nums[i], i]);
+//   }
+//   A.sort((a, b) => a[0] - b[0]);
+//   let i = 0,
+//     j = nums.length - 1;
+//   while (i < j) {
+//     let curr = A[i][0] + A[j][0];
+//     if (curr === target) {
+//       return [Math.min(A[i][1], A[j][1]), Math.max(A[i][1], A[j][1])];
+//     } else if (curr < target) {
+//       i++;
+//     } else {
+//       j--;
+//     }
+//   }
+//   return [];
+// }
+
+// console.log(twoSum(nums, target));
+
+// two pointers
+
+// let nums = [2, 7, 11, 15];
+// let target = 9;
+
+// function twoSum(nums, target) {
+//   // 1. Pair values with original indices
+//   const arr = nums.map((val, idx) => [val, idx]);
+
+//   // 2. Sort by value
+//   arr.sort((a, b) => a[0] - b[0]);
+
+//   // 3. Two pointers
+//   let l = 0,
+//     r = arr.length - 1;
+//   while (l < r) {
+//     const sum = arr[l][0] + arr[r][0];
+//     if (sum === target) {
+//       // 4. Return original indices
+//       return [arr[l][1], arr[r][1]];
+//     } else if (sum < target) {
+//       l++;
+//     } else r--;
+//   }
+// }
+
+// console.log(twoSum(nums, target));
+
