@@ -235,3 +235,46 @@
 
 // console.log(twoSum(nums, target));
 
+// neetcode hashmap(two pass)
+
+// let nums = [2, 7, 11, 15];
+// let target = 9;
+
+// function twoSum(nums, target) {
+//   const indices = {};
+
+//   for (let i = 0; i < nums.length; i++) {
+//     indices[nums[i]] = 1;
+//   }
+//   for (let i = 0; i < nums.length; i++) {
+//     let diff = target - nums[i];
+//     if (indices[diff] !== undefined && indices[diff] !== i) {
+//       return [i, indices[diff]];
+//     }
+//   }
+//   return [];
+// }
+
+// console.log(twoSum(nums, target));
+
+// hash maps (one pass)
+
+// let nums = [2, 7, 11, 15];
+// let target = 9;
+
+// function twoSum(nums, target) {
+//   const prevMap = new Map();
+
+//   for (let i = 0; i < nums.length; i++) {
+//     const diff = target - nums[i];
+//     if (prevMap.has(diff)) {
+//       return [prevMap.get(diff), i];
+//     }
+//     prevMap.set(nums[i], i);
+//   }
+//   return []; // for safety purposes
+// }
+
+// console.log(twoSum(nums, target));
+
+
