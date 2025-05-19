@@ -32,3 +32,21 @@
 //   myList.forEach((item) => console.log(item));
 // }
 // printItems(myList);
+
+let myList = ["apple", "banana", "cherry"];
+
+// myList.forEach((item, i) => setTimeout(() => console.log(item), i * 1000));
+
+// or
+
+// pause helper
+const sleep = (ms) => new Promise((res) => setTimeout(res, ms));
+
+// prints one item per second, in order
+async function printItemsWithDelay(myList) {
+  for (const item of myList) {
+    await sleep(1000);
+    console.log(item);
+  }
+}
+printItemsWithDelay(myList)
