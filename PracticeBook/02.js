@@ -124,3 +124,4 @@
 // console.log(getPage("example.com")); // Returns cached
 // console.log(getPage("another.com")); // Fetches from server
 // console.log(getPage("another.com")); // Returns cached
+
