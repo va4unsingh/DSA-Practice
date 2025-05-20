@@ -40,3 +40,63 @@
 // }
 
 // console.log(containsDuplicate(nums));
+
+// by using sorting - O(n log n)
+// let nums = [1, 2, 3, 1];
+
+// function containsDuplicate(nums) {
+//   nums.sort((a, b) => a - b);
+
+//   for (let i = 0; i < nums.length; i++) {
+//     if (nums[i] === nums[i - 1]) {
+//       return true;
+//     }
+//   }
+//   return false;
+// }
+
+// console.log(containsDuplicate(nums));
+
+// LeetCode ques 2
+// using brute force by sorting O(n log n)
+
+// let s = "racecar";
+// let t = "carrace";
+
+// function isAnagram(s, t) {
+//   if (s.length !== t.length) {
+//     return false;
+//   }
+//   let Ssort = s.split("").sort().join("");
+//   let Tsort = t.split("").sort().join("");
+//   return Ssort === Tsort;
+// }
+
+// console.log(isAnagram(s, t));
+
+// Using hash maps
+
+let s = "racecar";
+let t = "carrace";
+
+function isAnagram(s, t) {
+  if (s.length !== t.length) {
+    return false;
+  }
+
+  let sCount = {};
+  let tCount = {};
+
+  for (let i = 0; i < s.length; i++) {
+    sCount[s[i]] = (sCount[s[i]] || 0) + 1;
+    tCount[t[i]] = (tCount[t[i]] || 0) + 1;
+  }
+  for (const key in sCount) {
+    if (sCount[key] !== tCount[key]) {
+      return false;
+    }
+  }
+  return true
+}
+
+console.log(isAnagram(s, t));
