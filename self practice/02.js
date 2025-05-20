@@ -120,3 +120,62 @@
 // }
 
 // console.log(isAnagram(s, t));
+
+// leet code ques 3 - O(n2)
+
+// let nums = [3, 4, 5, 6];
+// let target = 7;
+
+// // Output: [0, 1];
+
+// function twoSum(nums, target) {
+//   for (let i = 0; i < nums.length; i++) {
+//     for (let j = i + 1; j < nums.length; j++) {
+//       if (nums[i] + nums[j] === target) {
+//         return [i, j];
+//       }
+//     }
+//   }
+//   return [];
+// }
+
+// console.log(twoSum(nums, target));
+
+// Sorting - O(n log n)
+
+// let nums = [3, 4, 5, 6];
+// let target = 7;
+
+// // Output: [0, 1];
+
+// function twoSum(nums, target) {
+//   let arr = nums.map((val, idx) => [val, idx]);
+//   // console.log(arr);
+//   let vader = arr.sort((a, b) => a[0] - b[0]);
+//   // console.log(vader);
+//   let l = 0;
+//   let r = vader.length - 1;
+//   while (l < r) {
+//     const sum = vader[l][0] + vader[r][0];
+//     if (sum === target) {
+//       return [arr[l][1], arr[r][1]];
+//     } else if (sum < target) {
+//       l++;
+//     } else {
+//       r--;
+//     }
+//   }
+// }
+
+// console.log(twoSum(nums, target));
+
+// using Hash Map (Two Pass) - O(n)
+
+let nums = [3, 4, 5, 6];
+let target = 7;
+
+// Output: [0, 1];
+
+function twoSum(nums, target) {}
+
+console.log(twoSum(nums, target));
