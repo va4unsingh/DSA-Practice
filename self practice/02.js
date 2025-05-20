@@ -74,29 +74,49 @@
 
 // console.log(isAnagram(s, t));
 
-// Using hash maps
+// Using hash maps (n)
 
-let s = "racecar";
-let t = "carrace";
+// let s = "racecar";
+// let t = "carrace";
 
-function isAnagram(s, t) {
-  if (s.length !== t.length) {
-    return false;
-  }
+// function isAnagram(s, t) {
+//   if (s.length !== t.length) {
+//     return false;
+//   }
 
-  let sCount = {};
-  let tCount = {};
+//   let sCount = {};
+//   let tCount = {};
 
-  for (let i = 0; i < s.length; i++) {
-    sCount[s[i]] = (sCount[s[i]] || 0) + 1;
-    tCount[t[i]] = (tCount[t[i]] || 0) + 1;
-  }
-  for (const key in sCount) {
-    if (sCount[key] !== tCount[key]) {
-      return false;
-    }
-  }
-  return true
-}
+//   for (let i = 0; i < s.length; i++) {
+//     sCount[s[i]] = (sCount[s[i]] || 0) + 1;
+//     tCount[t[i]] = (tCount[t[i]] || 0) + 1;
+//   }
+//   for (const key in sCount) {
+//     if (sCount[key] !== tCount[key]) {
+//       return false;
+//     }
+//   }
+//   return true
+// }
 
-console.log(isAnagram(s, t));
+// console.log(isAnagram(s, t));
+
+// using hash tables - O(n)
+
+// let s = "racecar";
+// let t = "carrace";
+
+// function isAnagram(s, t) {
+//   if (s.length !== t.length) {
+//     return false;
+//   }
+
+//   const count = new Array(26).fill(0);
+//   for (let i = 0; i < s.length; i++) {
+//     count[s.charCodeAt(i) - "a".charCodeAt(0)]++;
+//     count[t.charCodeAt(i) - "a".charCodeAt(0)]--;
+//   }
+//   return count.every((val) => val === 0);
+// }
+
+// console.log(isAnagram(s, t));
