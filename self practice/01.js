@@ -277,4 +277,22 @@
 
 // console.log(twoSum(nums, target));
 
+// Med level
 
+let strs = ["eat", "tea", "tan", "ate", "nat", "bat"];
+//Exp Output: [["bat"],["nat","tan"],["ate","eat","tea"]]
+
+function groupAnagrams(strs) {
+  let map = new Map();
+  for (const s of strs) {
+    let key = s.split("").sort().join("");
+
+    if (!map.has(key)) {
+      map.set(key, []);
+    }
+    map.get(key).push(s);
+  }
+  return Array.from(map.values());
+}
+
+console.log(groupAnagrams(strs));
