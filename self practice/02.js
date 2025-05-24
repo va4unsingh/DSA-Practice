@@ -169,13 +169,111 @@
 
 // console.log(twoSum(nums, target));
 
-// using Hash Map (Two Pass) - O(n)
+// One-pass Hash Map chat gpt- O(n)
 
-let nums = [3, 4, 5, 6];
-let target = 7;
+// let nums = [3, 4, 5, 6];
+// let target = 7;
 
-// Output: [0, 1];
+//   // Output: [0, 1];
 
-function twoSum(nums, target) {}
+// function twoSum(nums, target) {
+//   const map = {};
 
-console.log(twoSum(nums, target));
+//   for (let i = 0; i < nums.length; i++) {
+//     const complement = target - nums[i];
+//     // console.log(complement);
+//     if (map.hasOwnProperty(complement)) {
+//       return [map[complement], i];
+//     }
+//     map[nums[i]] = i;
+//   }
+// }
+
+// console.log(twoSum(nums, target));
+
+// Hash Map (One Pass) leetcode - O(n)
+
+// let nums = [3, 4, 5, 6];
+// let target = 7;
+
+// // Output: [0, 1];
+
+// function twoSum(nums, target) {
+//   let map = new Map();
+//   for (let i = 0; i < nums.length; i++) {
+//     const diff = target - nums[i];
+//     if (map.has(diff)) {
+//       return [map.get(diff), i];
+//     }
+//     map.set(nums[i], i);
+//   }
+// }
+
+// console.log(twoSum(nums, target));
+
+// Leet code ques - 4 gpt help // Sorting O(n * k log k)
+// let strs = ["eat", "tea", "tan", "ate", "nat", "bat"];
+
+// // Output: [["bat"],["nat","tan"],["ate","eat","tea"]]
+
+// function groupAnagrams(strs) {
+//   const map = {};
+
+//   for (const word of strs) {
+//     const sorted = word.split("").sort().join("");
+
+//     // console.log(sorted);
+
+//     if (!map[sorted]) {
+//       map[sorted] = [];
+//     }
+//     map[sorted].push(word);
+//   }
+//   return Object.values(map);
+// }
+
+// console.log(groupAnagrams(strs));
+
+// Sorting - (m*n log n)
+
+// let strs = ["eat", "tea", "tan", "ate", "nat", "bat"];
+
+// // Output: [["bat"],["nat","tan"],["ate","eat","tea"]]
+
+// function groupAnagrams(strs) {
+//   const res = {};
+//   for (let s of strs) {
+//     const sortedS = s.split("").sort().join("");
+//     if (!res[sortedS]) {
+//       res[sortedS] = [];
+//     }
+//     res[sortedS].push(s);
+//   }
+//   return Object.values(res);
+// }
+
+// console.log(groupAnagrams(strs));
+
+// Hash Table O(m*n)
+
+let strs = ["eat", "tea", "tan", "ate", "nat", "bat"];
+
+// Output: [["bat"],["nat","tan"],["ate","eat","tea"]]
+
+function groupAnagrams(strs) {
+  const res = {};
+  for (let s of strs) {
+    const count = new Array(26).fill(0);
+    for (let c of s) {
+      count[c.charCodeAt(0) - "a".charCodeAt(0)] += 1;
+    }
+    const key = count.join(",");
+    if (!res[key]) {
+      res[key] = [];
+    }
+    res[key].push(s);
+  }
+  return Object.values(res);
+}
+
+console.log(groupAnagrams(strs));
